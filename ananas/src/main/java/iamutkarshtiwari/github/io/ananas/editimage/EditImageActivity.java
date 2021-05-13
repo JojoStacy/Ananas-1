@@ -91,7 +91,7 @@ public class EditImageActivity extends BaseActivity implements OnLoadingDialogLi
     protected boolean isPortraitForced = false;
     protected boolean isSupportActionBarEnabled = false;
     public CustomPaintView paintView;
-    //public ViewFlipper bannerFlipper;
+    public ViewFlipper bannerFlipper;
     public BrightnessView brightnessView;
     public SaturationView saturationView;
     public RotateImageView rotatePanel;
@@ -176,9 +176,9 @@ public class EditImageActivity extends BaseActivity implements OnLoadingDialogLi
         imageWidth = metrics.widthPixels / 2;
         imageHeight = metrics.heightPixels / 2;
 
-        //bannerFlipper = findViewById(R.id.banner_flipper);
-       // bannerFlipper.setInAnimation(this, R.anim.in_bottom_to_top);
-      // bannerFlipper.setOutAnimation(this, R.anim.out_bottom_to_top);
+        bannerFlipper = findViewById(R.id.banner_flipper);
+        bannerFlipper.setInAnimation(this, R.anim.in_bottom_to_top);
+        bannerFlipper.setOutAnimation(this, R.anim.out_bottom_to_top);
         View applyBtn = findViewById(R.id.apply);
         applyBtn.setOnClickListener(new ApplyBtnClick());
         View saveBtn = findViewById(R.id.save_btn);
